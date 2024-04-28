@@ -38,23 +38,34 @@
 
 .res-card {
     width: 300px;
-    height: 32 0px;
     border: 1px solid black;
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
+    transition: transform 0.2s ease;
+}
+
+.res-menu h4 {
+    /* Allow cuisines to wrap onto a new line */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.res-image :hover {
+    transform: scale(0.95);
 }
 
 .res-image {
     width: 100%;
     height: 200px;
     border-radius: 5px;
-
 }
 
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .res-menu {
