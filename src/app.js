@@ -9,7 +9,9 @@ const HomePage = () => (
             <NavbarComponent />
         </div>
         <div className="body">
-            <h3>Search</h3>
+            <button className="filter-btn" onClick={() => {
+
+            }}></button>
             <CardContainer />
         </div>
         <div className="footer">

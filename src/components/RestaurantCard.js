@@ -11,6 +11,7 @@ const RestaurantCard = (props) => {
             <h3 style={{ marginBottom: "0px" }}>{name}</h3>
             <div className="res-menu">
                 <h4>{cuisines.join(",")}</h4>
+                <h4>{ }</h4>
                 <h4>{deliveryTime + " min"}</h4>
             </div>
             <span>{costForTwo}</span>

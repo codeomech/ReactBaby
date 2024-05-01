@@ -11,4 +11,5 @@ const NavbarComponent = () => (
     </div >
 )
 
+export const varex = 5;
 export default NavbarComponent;
