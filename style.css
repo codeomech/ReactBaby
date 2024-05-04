@@ -9,7 +9,7 @@
     width: 70px;
     padding: 5px;
     cursor: pointer;
-    margin-right: 65%;
+    margin-right: 60%;
 }
 
 .logo:hover {
@@ -110,4 +110,11 @@
 .filter-btn:hover {
     background-color: #c21919;
     color: #fff;
+}
+
+.search-box {
+    padding: 10px 10px;
+    margin-left: 64px;
+    border: 2px solid #c21919;
+    border-radius: 5px;
 }
