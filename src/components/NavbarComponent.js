@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import logo from '../image/klipartz.com.png';
+import { Link } from 'react-router-dom';
 
 
 const NavbarComponent = () => {
@@ -9,10 +10,10 @@ const NavbarComponent = () => {
     return (
         <div className="navbar">
             <img className="logo" src={logo} alt="Logo"></img>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/contact">Contact</Link>
             <a onClick={() => {
                 btnname === 'Login' ? setbtnname('Logout') : setbtnname('Login');
             }}>{btnname}</a>
@@ -20,5 +21,4 @@ const NavbarComponent = () => {
     )
 }
 
-export const varex = 5;
 export default NavbarComponent;

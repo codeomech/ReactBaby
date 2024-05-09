@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
 import RestaurantCard from "./RestaurantCard";
 import {
     useEffect,
     useState
 } from "react";
 import ShimmerComponent from "./Shimmer";
+
 
 const CardContainer = () => {
     const [listofRestaurant, setListofRestaurant] = useState([])
@@ -13,6 +15,7 @@ const CardContainer = () => {
     useEffect(() => {
         fetchRestData();
     }, [])
+    // https://proxy.cors.sh/
 
     const fetchRestData = async () => {
         const data = await fetch(
@@ -54,7 +57,7 @@ const CardContainer = () => {
             <button className="filter-btn" onClick={handleTopRatedFilter}>Top Rated</button>
             <div className="cardContainer">
                 {listofRestaurant.map((restaurant) => (
-                    <RestaurantCard key={restaurant.info?.id} resData={restaurant} />
+                    <Link key={restaurant.info?.id} to={"/restaurants/" + restaurant.info?.id}><RestaurantCard resData={restaurant} /></Link>
                 ))}
             </div>
         </div>
