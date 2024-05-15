@@ -68,10 +68,6 @@
     text-overflow: ellipsis;
 }
 
-.res-image :hover {
-    transform: scale(0.95);
-}
-
 .res-image {
     width: 100%;
     height: 200px;
@@ -147,4 +143,31 @@
 .cardContainer a {
     text-decoration: none;
     color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+res-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardContainer a:hover {
+    transform: scale(1.05);
+}
+
+.button-secondary {
+    --tw-border-opacity: 1;
+    background-color: transparent;
+    border-color: rgb(255 255 255/var(--tw-border-opacity));
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    padding: 1rem 2.5rem;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+.button-secondary:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    color: rgb(0 0 0/var(--tw-text-opacity))
 }

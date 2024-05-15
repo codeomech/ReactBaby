@@ -5,12 +5,14 @@ import {
     useState
 } from "react";
 import ShimmerComponent from "./Shimmer";
+import useOnlineStatus from '../constants/useOnlineStatus';
 
 
 const CardContainer = () => {
     const [listofRestaurant, setListofRestaurant] = useState([])
     const [originalRestaurantList, setOriginalRestaurantList] = useState([]);
     const [searchText, setSearchText] = useState("");
+    const onlineStatus = useOnlineStatus();
 
     useEffect(() => {
         fetchRestData();
@@ -43,6 +45,7 @@ const CardContainer = () => {
         setListofRestaurant(filteredList);
     }, [searchText, originalRestaurantList]);
 
+    if (onlineStatus == false) return <h1>YOU'RE OFFLINE BABY</h1>
 
     return listofRestaurant.length === 0 ? <ShimmerComponent /> : (
         <div className="body">
@@ -57,7 +60,7 @@ const CardContainer = () => {
             <button className="filter-btn" onClick={handleTopRatedFilter}>Top Rated</button>
             <div className="cardContainer">
                 {listofRestaurant.map((restaurant) => (
-                    <Link key={restaurant.info?.id} to={"/restaurants/" + restaurant.info?.id}><RestaurantCard resData={restaurant} /></Link>
+                    <Link key={restaurant.info?.id} to={"/restaurants/" + restaurant.info?.id}><RestaurantCard className="res-card" resData={restaurant} /></Link>
                 ))}
             </div>
         </div>
