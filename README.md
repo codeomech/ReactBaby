@@ -24,4 +24,27 @@ two types of routing
 Dynamic Route (API)
 
 
+Lecture 8 ClassBasedComponent()
+lifecycle of parent -child 
+Parent Constructor called
+Parent Render called
+Child Constructor
+Child Render
+Child Comp did Mount
+Parent Comp did Mount
 
+ComponentDidMount()
+We call OUR API here only in Class Component as this to be called last by react after rendering so that's why it's a best option 
+
+
+Custom hooks= first of all you have to follow the convention so you have to start the hook with "use"
+And Custom hooks are functional component But they need two things like parameters what the variable is required and what they're going to return 
+Example is = obtaning online status of User,
+
+Also we're going to learn about lazy loading 
+// chunking
+// Code splitting
+// Dynamic Bundling
+so Parcel is a bundler it just make one JS file for our whole code, It's fine If your project has 10-15 components or a small scale application But If you're building large scale application then that file which have 100 of components become so heavy SO what we do we will divinde our JS file into a differnt JS file through lazy loading and we load that JS only when we navigate to that page 
+Example As swiggy has two buisness like one is food delivery and one is instamart 
+SO like swiggy engineers must separate thier whole JS into many JS files AS it's a large scale application 
