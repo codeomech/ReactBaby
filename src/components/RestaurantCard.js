@@ -22,4 +22,16 @@ const RestaurantCard = (props) => {
     )
 }
 
+//Higher Order component 
+export const badgedPromotedRes = (RestaurantCard) => {
+    return (props) =>
+    (
+        < div >
+            <label className="labelDisc">{props.labelText}</label>
+            <RestaurantCard {...props} />
+        </div >
+    )
+}
+
+
 export default RestaurantCard;

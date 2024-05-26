@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { badgedPromotedRes } from "./RestaurantCard";
 import {
     useEffect,
     useState
@@ -14,6 +14,7 @@ const CardContainer = () => {
     const [searchText, setSearchText] = useState("");
     const onlineStatus = useOnlineStatus();
 
+    const RestaurantCardpromoted = badgedPromotedRes(RestaurantCard);
     useEffect(() => {
         fetchRestData();
     }, [])
@@ -60,7 +61,11 @@ const CardContainer = () => {
             <button className="filter-btn" onClick={handleTopRatedFilter}>Top Rated</button>
             <div className="cardContainer">
                 {listofRestaurant.map((restaurant) => (
-                    <Link key={restaurant.info?.id} to={"/restaurants/" + restaurant.info?.id}><RestaurantCard className="res-card" resData={restaurant} /></Link>
+                    <Link key={restaurant.info?.id} to={"/restaurants/" + restaurant.info?.id}>
+                        {restaurant.info?.
+                            aggregatedDiscountInfoV3 ? (<RestaurantCardpromoted className="res-card" resData={restaurant} labelText={restaurant.info.aggregatedDiscountInfoV3?.header + " " + restaurant.info.aggregatedDiscountInfoV3?.subHeader} />) :
+                            (<RestaurantCard className="res-card" resData={restaurant} />)}
+                    </Link>
                 ))}
             </div>
         </div>
