@@ -116,25 +116,17 @@
 }
 
 .restaurant-details {
-    display: flex;
-    justify-content: space-between;
-    /* Align items at the start */
     overflow-x: hidden;
-    /* Prevent horizontal scrollbar */
+    width: 100%;
     padding: 20px;
-    /* Optional: Add padding around the content */
 }
 
 
 .image-container img {
     width: 100%;
-    /* Make the image fill its container */
     height: auto;
-    /* Maintain aspect ratio */
     display: block;
-    /* Ensure image behaves correctly */
     max-width: 500px;
-    /* Ensure image doesn't exceed container width */
     max-height: 400px;
     padding: 20px;
     border-radius: 8px;
@@ -170,4 +162,41 @@ res-card {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
     color: rgb(0 0 0/var(--tw-text-opacity))
+}
+
+.labelDisc {
+    z-index: 100;
+    position: absolute;
+    margin-top: 190px;
+    color: white;
+    margin-left: 28px;
+    font-weight: bold;
+    background-color: rgba(31, 28, 28, 0.196);
+}
+
+.headerRes {
+    justify-content: space-between;
+    display: flex;
+    font: bold;
+    width: 100%;
+    border: 2px solid black;
+    background-color: antiquewhite;
+}
+
+.menu {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.menuImg {
+    width: 144px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mainmenu {
+    border: 1px solid gray;
+    padding: 10px;
+    margin-top: 10px;
 }

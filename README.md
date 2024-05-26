@@ -48,3 +48,12 @@ Also we're going to learn about lazy loading
 so Parcel is a bundler it just make one JS file for our whole code, It's fine If your project has 10-15 components or a small scale application But If you're building large scale application then that file which have 100 of components become so heavy SO what we do we will divinde our JS file into a differnt JS file through lazy loading and we load that JS only when we navigate to that page 
 Example As swiggy has two buisness like one is food delivery and one is instamart 
 SO like swiggy engineers must separate thier whole JS into many JS files AS it's a large scale application 
+
+
+episode 12 tailwind CSS , 
+
+episode 13 Higher order component it's a function which take components and return the component,
+it takes the component and tweak a little bit add a functionality or any property and then return the component.
+or enahnce the component and return it 
+
+
