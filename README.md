@@ -52,8 +52,15 @@ SO like swiggy engineers must separate thier whole JS into many JS files AS it's
 
 episode 12 tailwind CSS , 
 
-episode 13 Higher order component it's a function which take components and return the component,
+episode 13 
+Higher order component it's a function which take components and return the component,
 it takes the component and tweak a little bit add a functionality or any property and then return the component.
-or enahnce the component and return it 
+or enahnce the component and return it.
+
+
+react context (Data sharing to the nested children from parents )
+Global context like we need a loggged in user detail (global object)
+
+
 
 
