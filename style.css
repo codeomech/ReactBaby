@@ -118,7 +118,6 @@
 .restaurant-details {
     overflow-x: hidden;
     width: 100%;
-    padding: 20px;
 }
 
 
@@ -174,29 +173,75 @@ res-card {
     background-color: rgba(31, 28, 28, 0.196);
 }
 
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsss {
+    width: 100%
+}
+
 .headerRes {
     justify-content: space-between;
     display: flex;
-    font: bold;
-    width: 100%;
-    border: 2px solid black;
+    width: 80%;
     background-color: antiquewhite;
 }
 
 .menu {
-    justify-content: space-between;
-    display: flex;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    width: 50%
 }
 
 .menuImg {
     width: 144px;
     padding: 10px;
     border-radius: 5px;
+    flex-shrink: 0;
+    margin-left: 60px;
 }
 
 .mainmenu {
-    border: 1px solid gray;
     padding: 10px;
     margin-top: 10px;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divider {
+    border-bottom: .5px solid #d3d3d3;
+    height: .5px;
+    margin: 20px 0;
+}
+
+.itemname {
+    -webkit-font-smoothing: antialiased;
+    font-family: Basis_Grotesque_Pro_Bold;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.75);
+}
+
+.desc {
+    -webkit-font-smoothing: antialiased;
+    font-family: Basis_Grotesque_Pro;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.6);
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* Ensure no horizontal scroll on the entire page */
 }

@@ -6,12 +6,13 @@ const FoodMenu = ({ data }) => {
         <div >
             {data.map((item) => <div key={item.card.info.id}>
                 <div className="mainmenu">
-                    <img className="menuImg" src={imagestr + item?.card?.info?.imageId} alt="pizza"></img>
                     <div className="menu">
-                        <span>{item.card?.info?.name}</span>
-                        <span>{item.card?.info?.price / 100 || item.card?.info?.defaultPrice / 100} Rs</span>
+                        <span className="itemname">{item.card?.info?.name}</span>
+                        <span className="itemname">{item.card?.info?.price / 100 || item.card?.info?.defaultPrice / 100} Rs</span>
+                        <p className="desc">{item.card?.info?.description}</p>
                     </div>
-                    <p>{item.card?.info?.description}</p>
+                    <img className="menuImg" src={imagestr + item?.card?.info?.imageId} alt="pizza"></img>
+                    <div className="divider"></div>
                 </div>
             </div>)}
         </div>
